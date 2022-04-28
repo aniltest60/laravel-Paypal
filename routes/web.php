@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PaypalController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
+route::get('createpaypal', [PaypalController::class, 'createpaypal'])->name('createpaypal');
+
+route::get('processPaypal', [PaypalController::class, 'processPaypal'])->name('processPaypal');
+
+route::get('processSuccess', [PaypalController::class, 'processSuccess'])->name('processSuccess');
+
+route::get('processCancel', [PaypalController::class, 'processCancel'])->name('processCancel');
