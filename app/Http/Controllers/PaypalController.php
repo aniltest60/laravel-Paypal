@@ -9,7 +9,7 @@ class PaypalController extends Controller
 {
     public function createpaypal()
     {
-        return view('membership.paypal');
+        return view('paypal');
     }
 
 
